@@ -16,7 +16,8 @@
 $router->get('/', function () use ($router) {
 
     $version = $router->app->version();
-
     return view("index" , compact('version'));
 
 });
+
+$router->get('register', 'UserController@register');
